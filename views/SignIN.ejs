@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+    </head>
+<body>
+    <div class="container" style="max-width: 500px;">
+        <h1>Sign In</h1>
+        <form action="/login" method="POST" class="form-group">
+            <% if (msg!=null) { %>
+                <div class="alert alert-dismissible alert-success">
+                    <%= msg %>
+                  </div>
+            <% } %>       
+             
+            <% if (error) { %>
+                <div class="alert alert-dismissible alert-danger">
+                    <%= error %>
+                  </div>
+            <% } %> 
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="email">
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+            <button type="submit" class="btn btn-success">Sign In</button>
+            <a href="/register">have no account? Sign up here</a>
+        </form>
+    </div>
+    
+</body>
+</html>
